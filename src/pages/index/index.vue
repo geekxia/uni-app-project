@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
+		<image @click='skip' class="logo" src="/static/logo.png"></image>
 		<view>
 			<text class="title">{{title}}</text>
 		</view>
@@ -18,12 +18,16 @@
 
 		},
 		methods: {
-
+			skip() {
+				uni.navigateTo({
+				    url: '/pages/detail/detail?id=1'
+				});
+			}
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		text-align: center;
 		height: 400upx;
@@ -38,5 +42,10 @@
 	.title {
 		font-size: 36upx;
 		color: #8f8f94;
+	}
+	.box {
+		&>text {
+			color: red;
+		}
 	}
 </style>
