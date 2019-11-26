@@ -1,4 +1,4 @@
-# uni-app
+# uni-app-project
 
 ## Project setup
 ```
@@ -17,8 +17,3 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-
-解决sass问题：
-安装 sass-loader  node-sass

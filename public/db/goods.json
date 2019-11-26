@@ -1,0 +1,66 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "码家翻身",
+      "price": "2000",
+      "imgs": ["//m.360buyimg.com/mobilecms/s150x150_jfs/t28573/35/1314712684/549568/73294502/5cdd18b9N507fcafe.jpg!q70.jpg.dpg"]
+    },
+    {
+      "id": 2,
+      "name": "运动鞋",
+      "price": "2000",
+      "imgs": ["//m.360buyimg.com/n1/s150x150_jfs/t18337/154/150031047/10921/90aecefc/5a60384dN46bf2eac.jpg!q70.jpg.dpg"]
+    },
+    {
+      "id": 3,
+      "name": "笔记本",
+      "price": "2000",
+      "imgs": ["//m.360buyimg.com/n1/s150x150_jfs/t29566/227/1464891645/10350/a5b133e2/5ce20cdcNd9cdd972.jpg!q70.jpg.dpg"]
+    },
+    {
+      "id": 4,
+      "name": "儿童奶粉",
+      "price": "2000",
+      "imgs": ["//m.360buyimg.com/mobilecms/s150x150_jfs/t1/71612/30/758/62076/5cefa5a6E2494c8c2/13aac3e0bb1b4e55.png!q70.jpg.dpg"]
+    },
+    {
+      "id": 5,
+      "name": "音乐耳机",
+      "price": "2000",
+      "imgs": ["//m.360buyimg.com/mobilecms/s150x150_jfs/t1/38988/36/7707/54292/5cefa2b0E1cce5cfa/64e76ed6c67568bf.png!q70.jpg.dpg"]
+    },
+    {
+      "id": 6,
+      "name": "背包",
+      "price": "2000",
+      "imgs": ["//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/76350/2/14589/304143/5dc25877E7ee6f93b/1374ae1e2e144330.jpg!q70.dpg.webp"]
+    },
+    {
+      "id": 7,
+      "name": "男士衬衫",
+      "price": "2000",
+      "imgs": ["//img12.360buyimg.com/mobilecms/s372x372_jfs/t1/54078/33/10722/285332/5d7f0964Edfa4b481/7ce2843dc8ea097e.jpg!q70.dpg.webp"]
+    },
+    {
+      "id": 8,
+      "name": "女士拖鞋",
+      "price": "2000",
+      "imgs": ["//img11.360buyimg.com/mobilecms/s372x372_jfs/t1/97138/18/12/432265/5da58067E3e681027/fe7de9c463e48010.jpg!q70.dpg.webp"]
+    },
+    {
+      "id": 9,
+      "name": "数据线",
+      "price": "2000",
+      "imgs": ["//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/11280/33/11287/56626/5c860ba1Ef0559611/91d533478dc8f798.jpg!q70.dpg.webp"]
+    },
+    {
+      "id": 10,
+      "name": "吉它",
+      "price": "2000",
+      "imgs": ["//img14.360buyimg.com/mobilecms/s372x372_jfs/t8101/7/2316060392/274076/95ab0f82/59cb15eeNc698056e.png!q70.webp"]
+    }
+  ]
+}
