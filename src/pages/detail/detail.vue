@@ -12,7 +12,9 @@
 </template>
 
 <script>
-	import { JdSwiper, BuyButton } from '@/components'
+	// import { JdSwiper, BuyButton } from '@/components'
+	import BuyButton from '../../components/buy_button/BuyButton.vue'
+	import JdSwiper from '../../components/jd_swiper/JdSwiper.vue'
 	export default {
 		data() {
 			return {
@@ -26,12 +28,6 @@
 		components: {
 			JdSwiper,
 			BuyButton
-		},
-		onLoad(opt) {
-      console.log('路由参数', opt.id)
-		},
-		methods: {
-
 		}
 	}
 </script>

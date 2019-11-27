@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 	<view class="buy_button">
 
 			<view class="bb_btn" @tap='call'>

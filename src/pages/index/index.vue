@@ -20,7 +20,8 @@
 </template>
 
 <script>
-	import { JdSwiper } from '@/components'
+	// import { JdSwiper } from '@/components'
+	import JdSwiper from '../../components/jd_swiper/JdSwiper.vue'
 	import { getGoods } from '@/utils/api.js'
 	export default {
 		data() {

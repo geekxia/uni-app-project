@@ -2,14 +2,14 @@
 	<view class="page_user">
 		<view class="pu_info">
 			<image @tap='changeAvatar' class="pu_avater" :src="userinfo.avatar"></image>
-			<input type="text" v-model='userinfo.username'>
+			<input type="text" v-model='userinfo.username' @input='nameChange'>
 		</view>
 
 		<view class="pu_actions">
-			<view>
+			<view @tap='skipToOrderDetail'>
 				<image src='/static/user/order.png' />
 				<text>我的订单</text>
-				<text class="pua_num">2</text>
+				<text class="pua_num" v-text='orderArr.length'></text>
 			</view>
 			<view>
 				<image src='/static/user/star.png' />
@@ -21,7 +21,7 @@
 				<text>消息中心</text>
 				<text class="pua_num">5</text>
 			</view>
-			<view>
+			<view @tap='clean'>
 				<image src='/static/user/clean.png' />
 				<text>清除缓存</text>
 			</view>
@@ -38,10 +38,12 @@
 		data() {
 			return {
 				userinfo: getApp().globalData.userinfo,
+				orderArr: []
 			}
 		},
 		onShow() {
 			console.log('订单列表', getApp().globalData.orderArr)
+			this.orderArr = getApp().globalData.orderArr
 		},
 		methods: {
 			// 换头像
@@ -57,6 +59,26 @@
 							// 更新全局数据
 							getApp().globalData.userinfo = that.userinfo
 			    }
+				})
+			},
+			// 改用户名
+			nameChange() {
+				console.log(this.userinfo)
+				getApp().globalData.userinfo = this.userinfo
+			},
+			// 清除缓存
+			clean() {
+				uni.clearStorageSync()
+				uni.showToast({
+				    title: '清除成功',
+				    duration: 2000
+				})
+			},
+			// 跳转至订单详情
+			skipToOrderDetail() {
+				if (this.orderArr.length < 1) return
+				uni.navigateTo({
+					url: '/pages/order/order'
 				})
 			}
 		}
