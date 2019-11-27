@@ -17,6 +17,7 @@
 			},
 			curGood: {},   // 全局的商品详情
 			cartArr: [],   // 购物车中的商品列表
+			orderArr: [],	 // 订单列表
 		}
 	}
 </script>

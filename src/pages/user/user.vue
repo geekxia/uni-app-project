@@ -2,24 +2,46 @@
 	<view class="page_user">
 		<view class="pu_info">
 			<image @tap='changeAvatar' class="pu_avater" :src="userinfo.avatar"></image>
-			<view v-text="userinfo.username"></view>
+			<input type="text" v-model='userinfo.username'>
+		</view>
+
+		<view class="pu_actions">
+			<view>
+				<image src='/static/user/order.png' />
+				<text>我的订单</text>
+				<text class="pua_num">2</text>
+			</view>
+			<view>
+				<image src='/static/user/star.png' />
+				<text>我的收藏</text>
+				<text class="pua_num">20</text>
+			</view>
+			<view>
+				<image src='/static/user/msg.png' />
+				<text>消息中心</text>
+				<text class="pua_num">5</text>
+			</view>
+			<view>
+				<image src='/static/user/clean.png' />
+				<text>清除缓存</text>
+			</view>
+			<view>
+				<image src='/static/user/setting.png' />
+				<text>设置</text>
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
-	// 在组件里，获取全局的共享状态数据
-	let appData = getApp().globalData
-
 	export default {
 		data() {
 			return {
-				title: 'Hello',
-				userinfo: appData.userinfo
+				userinfo: getApp().globalData.userinfo,
 			}
 		},
-		onLoad() {
-			console.log('globalData', appData)
+		onShow() {
+			console.log('订单列表', getApp().globalData.orderArr)
 		},
 		methods: {
 			// 换头像
@@ -33,9 +55,9 @@
 			        console.log('换头像',res.tempFilePaths[0])
 							that.userinfo.avatar = res.tempFilePaths[0]
 							// 更新全局数据
-							appData.userinfo.avatar = res.tempFilePaths[0]
+							getApp().globalData.userinfo = that.userinfo
 			    }
-			});
+				})
 			}
 		}
 	}
@@ -43,12 +65,51 @@
 
 <style lang="scss">
 	.page_user {
-		text-align: center;
+		background: rgba(245,245,245,1);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
 		.pu_info {
+			text-align: center;
+			padding: 30rpx 0;
+			background-color: white;
+			margin-bottom: 20rpx;
 			&>image {
 				width: 200rpx;
 				height: 200rpx;
 				border-radius: 50%;
+			}
+		}
+
+		.pu_actions {
+			&>view {
+				height: 100rpx;
+				line-height: 100rpx;
+				overflow: hidden;
+				background-color: white;
+				&>image {
+					width: 50rpx;
+					height: 50rpx;
+					float: left;
+					margin: 25rpx 20rpx;
+				}
+				.pua_num {
+					float: right;
+					margin-right: 20rpx;
+					color: #d81e06;
+				}
+			}
+			&>view:nth-child(1) {
+				margin-bottom: 20rpx;
+			}
+			&>view:nth-child(3) {
+				margin-bottom: 20rpx;
+			}
+			&>view:nth-child(3) {
+				margin-bottom: 20rpx;
 			}
 		}
 	}
